@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { CheckCircle, Wrench, Zap, Search, CircleDot, Cog, Droplet, ArrowRight } from "lucide-react";
+import { CheckCircle, Wrench, Zap, Search, CircleDot, Cog, Droplet, ArrowRight, ClipboardCheck, Settings } from "lucide-react";
 import { Button } from "../components/ui/button";
 import { Card } from "../components/ui/card";
 
@@ -55,7 +55,7 @@ export function Services() {
     },
     {
       icon: CircleDot,
-      title: "Brake & Suspension",
+      title: "Brake",
       description: "Complete brake and suspension services to ensure your vehicle's safety and comfort on the road.",
       features: [
         "Brake pad replacement",
@@ -67,7 +67,7 @@ export function Services() {
     },
     {
       icon: Cog,
-      title: "Engine Repairs",
+      title: "Engine & Transmission service",
       description: "Comprehensive engine repair and maintenance services from minor tune-ups to complete engine rebuilds.",
       features: [
         "Engine diagnostics",
@@ -88,6 +88,30 @@ export function Services() {
         "Synthetic oils available",
       ],
       image: "https://images.unsplash.com/photo-1771340742493-52fbd5476ccb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXIlMjBvaWwlMjBjaGFuZ2UlMjBzZXJ2aWNlfGVufDF8fHx8MTc3MzcxMjM1OXww&ixlib=rb-4.1.0&q=80&w=1080",
+    },
+    {
+      icon: ClipboardCheck,
+      title: "Pre-Purchase Inspection",
+      description: "Comprehensive pre-purchase vehicle inspection to give you peace of mind before buying. Our detailed report covers all major systems and potential issues.",
+      features: [
+        "Complete mechanical inspection",
+        "Detailed condition report",
+        "Test drive evaluation",
+        "Buy with confidence",
+      ],
+      image: "https://images.unsplash.com/photo-1727893467393-24bc37e8a117?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcmUlMjBwdXJjaGFzZSUyMGNhciUyMGluc3BlY3Rpb24lMjBtZWNoYW5pY3xlbnwxfHx8fDE3NzY0MTQxNjd8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    },
+    {
+      icon: Settings,
+      title: "Steering & Suspension",
+      description: "Expert steering and suspension services to ensure precise handling, optimal comfort, and safe vehicle control on all road conditions.",
+      features: [
+        "Steering system repairs",
+        "Suspension component replacement",
+        "Wheel alignment & balancing",
+        "Shock absorber service",
+      ],
+      image: "https://images.unsplash.com/photo-1765903916319-f13fba3632c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXIlMjBzdGVlcmluZyUyMHN1c3BlbnNpb24lMjBzeXN0ZW18ZW58MXx8fHwxNzc2NDE0MTY3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
     },
   ];
 

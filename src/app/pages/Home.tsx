@@ -2,6 +2,7 @@ import { Link } from "react-router";
 import { Wrench, CheckCircle, Clock, Users, Star, ArrowRight } from "lucide-react";
 import { Button } from "../components/ui/button";
 import { Card } from "../components/ui/card";
+import { Testimonials } from "../components/Testimonials";
 
 export function Home() {
   const services = [
@@ -16,7 +17,7 @@ export function Home() {
       icon: Wrench,
     },
     {
-      title: "Engine Repairs",
+      title: "Engine & Transmission service",
       description: "Professional engine diagnostics and repair services.",
       icon: Wrench,
     },
@@ -47,24 +48,6 @@ export function Home() {
       icon: CheckCircle,
       title: "Latest Equipment",
       description: "State-of-the-art diagnostic and repair equipment.",
-    },
-  ];
-
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      review: "Excellent service! The team at AutoHub diagnosed and fixed my car's issue quickly. Highly recommend!",
-      rating: 5,
-    },
-    {
-      name: "Michael Chen",
-      review: "Professional and trustworthy. They explained everything clearly and the pricing was fair.",
-      rating: 5,
-    },
-    {
-      name: "Emma Williams",
-      review: "Best auto service center in Auckland. My car runs like new after their engine service.",
-      rating: 5,
     },
   ];
 
@@ -134,7 +117,7 @@ export function Home() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-[#DEDEDE] mb-4">Why Choose AutoHub?</h2>
             <p className="text-[#A0A0A0] max-w-2xl mx-auto">
-              We're committed to providing the best automotive service experience in Auckland.
+             We’re committed to providing the best automotive service experience in Bay of Plenty.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -152,29 +135,7 @@ export function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-[#000000]">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#DEDEDE] mb-4">What Our Customers Say</h2>
-            <p className="text-[#A0A0A0] max-w-2xl mx-auto">
-              Don't just take our word for it - hear from our satisfied customers.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="bg-[#262626] border-[#0368D3]/20 p-6">
-                <div className="flex gap-1 mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="fill-[#0368D3] text-[#0368D3]" size={20} />
-                  ))}
-                </div>
-                <p className="text-[#A0A0A0] mb-4 italic">&ldquo;{testimonial.review}&rdquo;</p>
-                <p className="text-[#DEDEDE] font-semibold">{testimonial.name}</p>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+      <Testimonials />
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-[#0368D3]/20 via-[#0368D3]/10 to-[#0368D3]/20">

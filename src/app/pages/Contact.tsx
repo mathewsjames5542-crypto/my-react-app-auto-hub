@@ -38,12 +38,12 @@ export function Contact() {
     {
       icon: MapPin,
       title: "Visit Us",
-      details: ["123 Auto Street", "Auckland 1010", "New Zealand"],
+      details: ["1/70 Truman Lane", "Mount Maunganui 3175"],
     },
     {
       icon: Phone,
       title: "Call Us",
-      details: ["+64 9 123 4567", "+64 21 987 6543", "Mon-Sat: 8am-6pm"],
+      details: ["079259984", "Mon-Sat: 8am-6pm"],
     },
     {
       icon: Mail,
@@ -220,8 +220,8 @@ export function Contact() {
                       <div className="absolute inset-0 flex items-center justify-center">
                         <div className="text-center">
                           <MapPin className="text-[#0368D3] mx-auto mb-4" size={48} />
-                          <p className="text-[#DEDEDE] font-semibold mb-2">123 Auto Street</p>
-                          <p className="text-[#A0A0A0]">Auckland 1010, New Zealand</p>
+                          <p className="text-[#DEDEDE] font-semibold mb-2">1/70 Truman Lane</p>
+                          <p className="text-[#A0A0A0]">Mount Maunganui 3175.</p>
                         </div>
                       </div>
                       {/* You can replace this with an actual map iframe */}
@@ -245,7 +245,7 @@ export function Contact() {
                   <div className="space-y-3 pt-4 border-t border-[#0368D3]/20">
                     <div className="flex items-center gap-3">
                       <Phone className="text-[#0368D3] flex-shrink-0" size={20} />
-                      <span className="text-[#DEDEDE]">+64 9 123 4567</span>
+                      <span className="text-[#DEDEDE]">079259984</span>
                     </div>
                     <div className="flex items-center gap-3">
                       <Mail className="text-[#0368D3] flex-shrink-0" size={20} />
@@ -281,7 +281,7 @@ export function Contact() {
                   What payment methods do you accept?
                 </h3>
                 <p className="text-[#A0A0A0]">
-                  We accept cash, EFTPOS, all major credit cards, and offer account facilities for commercial customers.
+                  We accept EFTPOS, all major credit cards, and offer account facilities for commercial customers.
                 </p>
               </Card>
 

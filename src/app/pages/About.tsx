@@ -1,12 +1,12 @@
 import { Users, Award, Clock, Heart, CheckCircle, Target, Eye } from "lucide-react";
 import { Card } from "../components/ui/card";
-import logo from "../../assets/logo.png";
+import logo from "figma:asset/93b3fae3eb97ab9525c7d6cddf6a333926c8f7b3.png";
 
 export function About() {
   const stats = [
     { value: "15+", label: "Years Experience" },
     { value: "10,000+", label: "Cars Serviced" },
-    { value: "50+", label: "Certified Technicians" },
+    { value: "Expert", label: "Team of Professionals" },
     { value: "98%", label: "Customer Satisfaction" },
   ];
 
@@ -67,7 +67,7 @@ export function About() {
               About AutoHub Service Centre
             </h1>
             <p className="text-lg text-[#A0A0A0]">
-              Since 2010, we've been Auckland's trusted automotive service center, providing exceptional care for vehicles of all makes and models.
+              From day one, we’re committed to becoming Bay of Plenty’s most trusted automotive service center—delivering exceptional care for vehicles of all makes and models.
             </p>
           </div>
         </div>
@@ -97,23 +97,23 @@ export function About() {
               <div>
                 <h2 className="text-3xl font-bold text-[#DEDEDE] mb-6">Our Story</h2>
                 <div className="space-y-4 text-[#A0A0A0]">
-                  <p>
-                    AutoHub Service Centre was founded in 2010 with a simple mission: to provide honest, reliable, and high-quality automotive services to the Auckland community.
-                  </p>
-                  <p>
-                    What started as a small workshop with just three technicians has grown into one of Auckland's most trusted automotive service centers, serving thousands of satisfied customers every year.
-                  </p>
-                  <p>
-                    Our success is built on a foundation of technical excellence, transparent pricing, and genuine care for our customers and their vehicles. We've invested in the latest diagnostic equipment and continuously train our team to stay ahead of automotive technology.
-                  </p>
-                  <p>
-                    Today, we're proud to be the go-to choice for families and businesses across Auckland who value quality, reliability, and exceptional customer service.
-                  </p>
+                 <p>
+  AutoHub Service Centre was founded in 2010 with a simple mission: to provide honest, reliable, and high-quality automotive services to the Bay of Plenty community.
+</p>
+<p>
+  What started as a small workshop with just three technicians has grown into one of Bay of Plenty’s most trusted automotive service centers, serving thousands of satisfied customers every year.
+</p>
+<p>
+  Our success is built on a foundation of technical excellence, transparent pricing, and genuine care for our customers and their vehicles. We’ve invested in the latest diagnostic equipment and continuously train our team to stay ahead of evolving automotive technology.
+</p>
+<p>
+  Today, we’re proud to be the go-to choice for families and businesses across Bay of Plenty who value quality, reliability, and exceptional customer service.
+</p>
                 </div>
               </div>
               <div className="relative">
                 <img 
-                  src="https://images.unsplash.com/photo-1698998882494-57c3e043f340?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhdXRvbW90aXZlJTIwbWVjaGFuaWMlMjB3b3Jrc2hvcHxlbnwxfHx8fDE3NzM3OTI4NTl8MA&ixlib=rb-4.1.0&q=80&w=1080"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1284.261374!2d176.1873!3d-37.975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d78f7b5a4b6b4d9%3A0xf4c2ff!2s1%2F70%20Truman%20Lane%2C%20Mount%20Maunganui%203175!5e0!3m2!1sen!2snz!4v1730!5m2!1sen!2snz"
                   alt="AutoHub Workshop"
                   className="rounded-lg w-full h-[400px] object-cover"
                 />
@@ -144,7 +144,7 @@ export function About() {
                 </div>
                 <h2 className="text-2xl font-bold text-[#DEDEDE] mb-4">Our Vision</h2>
                 <p className="text-[#A0A0A0]">
-                  To be Auckland's most trusted automotive service center, known for our integrity, expertise, and commitment to keeping our customers safe on the road.
+                 On a mission to become Bay of Plenty’s most trusted automotive service center—driven by integrity, expertise, and a commitment to keeping every customer safe on the road.
                 </p>
               </Card>
             </div>
@@ -178,7 +178,7 @@ export function About() {
       </section>
 
       {/* Team Section */}
-      <section className="py-20 bg-gradient-to-b from-[#000000] to-[#0A0A0A]">
+      {/* <section className="py-20 bg-gradient-to-b from-[#000000] to-[#0A0A0A]">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
@@ -201,10 +201,10 @@ export function About() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Certifications */}
-      <section className="py-20 bg-[#000000]">
+      {/* <section className="py-20 bg-[#000000]">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-[#DEDEDE] mb-6">
@@ -229,7 +229,7 @@ export function About() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }

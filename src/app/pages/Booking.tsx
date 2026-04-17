@@ -17,6 +17,7 @@ export function Booking() {
     service: "",
     date: "",
     time: "",
+    dropOffTime: "",
     notes: "",
   });
 
@@ -27,8 +28,9 @@ export function Booking() {
     "Mechanical Repairs",
     "Auto Electrical",
     "Diagnostics",
-    "Brake & Suspension",
+    "Brake",
     "Engine Repairs",
+    "Steering & Suspension",
     "Oil Services",
   ];
 
@@ -49,7 +51,7 @@ export function Booking() {
     e.preventDefault();
     
     // Validation
-    if (!formData.name || !formData.email || !formData.phone || !formData.service || !formData.date || !formData.time) {
+    if (!formData.name || !formData.email || !formData.phone || !formData.service || !formData.date || !formData.time || !formData.dropOffTime) {
       toast.error("Please fill in all required fields");
       return;
     }
@@ -79,7 +81,8 @@ export function Booking() {
             <div className="space-y-2 text-[#A0A0A0]">
               <p><span className="text-[#0368D3]">Service:</span> {formData.service}</p>
               <p><span className="text-[#0368D3]">Date:</span> {formData.date}</p>
-              <p><span className="text-[#0368D3]">Time:</span> {formData.time}</p>
+              <p><span className="text-[#0368D3]">Time Slot:</span> {formData.time}</p>
+              <p><span className="text-[#0368D3]">Drop off:</span> {formData.dropOffTime}</p>
               <p><span className="text-[#0368D3]">Email:</span> {formData.email}</p>
             </div>
           </div>
@@ -99,6 +102,7 @@ export function Booking() {
                 service: "",
                 date: "",
                 time: "",
+                dropOffTime: "",
                 notes: "",
               });
             }}
@@ -163,7 +167,7 @@ export function Booking() {
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="phone" className="text-[#DEDEDE]">Phone Number *</Label>
+                      <Label htmlFor="phone" className="text-[#DEDEDE]">Contact Number *</Label>
                       <Input
                         id="phone"
                         type="tel"
@@ -236,8 +240,27 @@ export function Booking() {
                     <div className="space-y-2">
                       <Label htmlFor="time" className="text-[#DEDEDE]">Time Slot *</Label>
                       <Select value={formData.time} onValueChange={(value) => handleInputChange("time", value)}>
-                        <SelectTrigger className="bg-[#1D1D1D] border-[#0368D3]/20 text-[#DEDEDE]">
+                      <SelectTrigger className="bg-[#1D1D1D] border-[#0368D3]/20 text-[#DEDEDE]">
                           <SelectValue placeholder="Choose a time" />
+                        </SelectTrigger>
+                        <SelectContent className="bg-[#262626] border-[#0368D3]/20">
+                          {timeSlots.map((time) => (
+                            <SelectItem 
+                              key={time} 
+                              value={time}
+                              className="text-[#DEDEDE] focus:bg-[#0368D3]/20 focus:text-[#DEDEDE]"
+                            >
+                              {time}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="dropOffTime" className="text-[#DEDEDE]">Drop off Time *</Label>
+                      <Select value={formData.dropOffTime} onValueChange={(value) => handleInputChange("dropOffTime", value)}>
+                        <SelectTrigger className="bg-[#1D1D1D] border-[#0368D3]/20 text-[#DEDEDE]">
+                          <SelectValue placeholder="Select drop off time" />
                         </SelectTrigger>
                         <SelectContent className="bg-[#262626] border-[#0368D3]/20">
                           {timeSlots.map((time) => (
@@ -254,6 +277,7 @@ export function Booking() {
                     </div>
                   </div>
                 </div>
+
 
                 {/* Additional Notes */}
                 <div>
