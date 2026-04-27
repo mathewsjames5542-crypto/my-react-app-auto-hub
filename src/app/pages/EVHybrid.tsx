@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { Battery, Zap, Leaf, Wrench, CheckCircle, ArrowRight, Shield, Clock } from "lucide-react";
+import { Battery, Zap, Leaf, Wrench, CheckCircle, ArrowRight, Shield, Clock, Snowflake } from "lucide-react";
 import { Button } from "../components/ui/button";
 import { Card } from "../components/ui/card";
 
@@ -7,7 +7,7 @@ export function EVHybrid() {
   const services = [
     {
       icon: Battery,
-      title: "EV Battery Diagnostics",
+      title: "Hybrid & EV Battery Diagnostics",
       description: "Comprehensive battery health checks, performance testing, and diagnostics using specialized equipment.",
     },
     {
@@ -16,9 +16,9 @@ export function EVHybrid() {
       description: "Complete servicing of hybrid powertrains including battery conditioning and system optimization.",
     },
     {
-      icon: Wrench,
-      title: "Electric Motor Repairs",
-      description: "Expert repairs and maintenance for electric motors and drive systems.",
+      icon: Snowflake,
+      title: "Hybrid Cooling System",
+      description: "Specialized diagnostics, servicing, and repairs for hybrid cooling systems to maintain safe battery and drivetrain temperatures.",
     },
     {
       icon: Shield,
@@ -53,16 +53,11 @@ export function EVHybrid() {
             <p className="text-lg md:text-xl text-[#A0A0A0] mb-8">
               Expert servicing and repairs for electric and hybrid vehicles. Our certified technicians are trained in the latest EV technology to keep your eco-friendly vehicle running at peak performance.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex justify-center">
               <Link to="/booking">
                 <Button className="bg-[#10B981] hover:bg-[#10B981]/90 text-white px-8 py-6 text-lg">
                   Book EV Service
                   <ArrowRight className="ml-2" size={20} />
-                </Button>
-              </Link>
-              <Link to="/contact">
-                <Button variant="outline" className="border-[#10B981] text-[#10B981] hover:bg-[#10B981]/10 px-8 py-6 text-lg">
-                  Get a Quote
                 </Button>
               </Link>
             </div>
@@ -147,26 +142,8 @@ export function EVHybrid() {
               We Service All EV & Hybrid Brands
             </h2>
             <p className="text-[#A0A0A0] mb-12">
-              Our expertise covers all major electric and hybrid vehicle manufacturers including Tesla, Nissan Leaf, Toyota Prius, BMW i-Series, Hyundai Kona Electric, and many more.
+              Our expertise covers all major electric and hybrid vehicle manufacturers including Tesla BYD, Nissan, Toyota, Lexus, BMW, Hyundai Electric, and many more.
             </p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              <Card className="bg-[#262626] border-[#10B981]/20 p-6 text-center">
-                <Battery className="text-[#10B981] mx-auto mb-2" size={32} />
-                <p className="text-[#DEDEDE] font-semibold">Tesla</p>
-              </Card>
-              <Card className="bg-[#262626] border-[#10B981]/20 p-6 text-center">
-                <Leaf className="text-[#10B981] mx-auto mb-2" size={32} />
-                <p className="text-[#DEDEDE] font-semibold">Nissan</p>
-              </Card>
-              <Card className="bg-[#262626] border-[#10B981]/20 p-6 text-center">
-                <Zap className="text-[#10B981] mx-auto mb-2" size={32} />
-                <p className="text-[#DEDEDE] font-semibold">BMW</p>
-              </Card>
-              <Card className="bg-[#262626] border-[#10B981]/20 p-6 text-center">
-                <Battery className="text-[#10B981] mx-auto mb-2" size={32} />
-                <p className="text-[#DEDEDE] font-semibold">Hyundai</p>
-              </Card>
-            </div>
           </div>
         </div>
       </section>

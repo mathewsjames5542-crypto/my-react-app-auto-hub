@@ -10,21 +10,26 @@ export function Home() {
       title: "WOF Inspection",
       description: "Comprehensive vehicle inspection to ensure your car meets safety standards.",
       icon: CheckCircle,
+      to: "/services#wof-inspection",
     },
     {
-      title: "Mechanical Repairs",
-      description: "Expert mechanical repairs for all makes and models of vehicles.",
+      title: "All Mechanical & Electrical Repairs",
+      description: "Expert mechanical & electrical repairs for all makes and models of vehicles.",
       icon: Wrench,
+      to: "/services#mechanical-repairs",
     },
     {
       title: "Engine & Transmission service",
-      description: "Professional engine diagnostics and repair services.",
+      description: "Professional engine & transmission diagnostics and repair services.",
       icon: Wrench,
+      to: "/services#engine-transmission-service",
     },
     {
-      title: "Oil Services",
-      description: "Regular oil changes and fluid maintenance for optimal performance.",
+      title: "EV & Hybrid",
+      description: "Specialized servicing and repairs for electric and hybrid vehicles.",
       icon: Clock,
+      to: "/ev-hybrid",
+      accent: "green",
     },
   ];
 
@@ -93,11 +98,22 @@ export function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service, index) => (
-              <Card key={index} className="bg-[#262626] border-[#0368D3]/20 p-6 hover:border-[#0368D3] transition-all duration-300 hover:transform hover:scale-105">
-                <service.icon className="text-[#0368D3] mb-4" size={40} />
-                <h3 className="text-[#DEDEDE] text-xl mb-2">{service.title}</h3>
-                <p className="text-[#A0A0A0]">{service.description}</p>
-              </Card>
+              <Link key={index} to={service.to} className="block h-full">
+                <Card
+                  className={`h-full bg-[#262626] p-6 transition-all duration-300 hover:transform hover:scale-105 ${
+                    service.accent === "green"
+                      ? "border-[#10B981]/30 hover:border-[#10B981]"
+                      : "border-[#0368D3]/20 hover:border-[#0368D3]"
+                  }`}
+                >
+                  <service.icon
+                    className={`mb-4 ${service.accent === "green" ? "text-[#10B981]" : "text-[#0368D3]"}`}
+                    size={40}
+                  />
+                  <h3 className="text-[#DEDEDE] text-xl mb-2">{service.title}</h3>
+                  <p className="text-[#A0A0A0]">{service.description}</p>
+                </Card>
+              </Link>
             ))}
           </div>
           <div className="text-center mt-12">

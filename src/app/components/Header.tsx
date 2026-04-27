@@ -40,11 +40,15 @@ export function Header() {
         ? "bg-[#000000]/98 backdrop-blur-md border-b border-[#0368D3]/30 shadow-lg shadow-[#0368D3]/5" 
         : "bg-[#000000]/95 backdrop-blur-sm border-b border-[#0368D3]/20"
     }`}>
-        <div className="container mx-auto px-4 py-8">
+        <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center transition-transform hover:scale-105">
-            <img src={logo} alt="AutoHub Service Centre" className="h-20 md:h-24" />
+          <Link to="/" className="flex items-center gap-3 transition-transform hover:scale-105">
+            <img src={logo} alt="AutoHub Service Centre" className="h-28 md:h-32" />
+            <div className="hidden md:flex flex-col">
+              <span className="text-white font-bold text-lg md:text-xl leading-tight">AutoHub Service Centre</span>
+              <span className="text-[#0368D3] text-sm md:text-base leading-tight">Driven by trust, Powered by expertise.</span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
@@ -53,7 +57,7 @@ export function Header() {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-xl md:text-2xl transition-colors relative ${
+                className={`text-base md:text-lg transition-colors relative ${
                   link.special === "green"
                     ? isActive(link.path)
                       ? "text-[#10B981] animate-pulse"

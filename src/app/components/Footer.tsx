@@ -9,15 +9,15 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <img src={logo} alt="AutoHub Service Centre" className="h-28 mb-6" />
+            <img src={logo} alt="AutoHub Service Centre" className="h-[45px] mb-6" />
             <p className="text-[#A0A0A0] mb-4">
               Your go-to automotive service center, delivering reliable repairs and maintenance you can count on.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="text-[#DEDEDE] hover:text-[#0368D3] transition-colors">
+              <a href="https://www.facebook.com/share/1Fjf9yQyx9/?mibextid=wwXIfr" className="text-[#DEDEDE] hover:text-[#0368D3] transition-colors">
                 <Facebook size={24} />
               </a>
-              <a href="#" className="text-[#DEDEDE] hover:text-[#0368D3] transition-colors">
+              <a href="https://www.instagram.com/autohubservicecentre?igsh=MXY2MGZpYzVlZndhaQ==" className="text-[#DEDEDE] hover:text-[#0368D3] transition-colors">
                 <Instagram size={24} />
               </a>
               {/* <a href="#" className="text-[#DEDEDE] hover:text-[#0368D3] transition-colors">
@@ -26,7 +26,7 @@ export function Footer() {
               <a href="https://wa.me/6491234567" className="text-[#DEDEDE] hover:text-[#0368D3] transition-colors" target="_blank" rel="noopener noreferrer">
                 <WhatsAppIcon size={24} />
               </a>
-              <a href="https://www.tiktok.com/@autohubnz" className="text-[#DEDEDE] hover:text-[#0368D3] transition-colors" target="_blank" rel="noopener noreferrer">
+              <a href="tiktok.com/@autohub89" className="text-[#DEDEDE] hover:text-[#0368D3] transition-colors" target="_blank" rel="noopener noreferrer">
                 <Share2 size={24} />
               </a>
             </div>
@@ -107,7 +107,7 @@ export function Footer() {
               </li>
               <li className="flex items-start gap-3 text-[#A0A0A0]">
                 <Clock size={20} className="text-[#0368D3] flex-shrink-0 mt-0.5" />
-                <span>Mon-Fri: 8am-6pm<br />Sat: 8am-4pm<br />Sun: Closed</span>
+                <span>Mon-Fri: 8am-5:30pm<br />Sat: 8am-1pm<br />Sun: Closed</span>
               </li>
             </ul>
           </div>

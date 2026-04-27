@@ -1,11 +1,15 @@
-import { Link } from "react-router";
+import { useEffect } from "react";
+import { Link, useLocation } from "react-router";
 import { CheckCircle, Wrench, Zap, Search, CircleDot, Cog, Droplet, ArrowRight, ClipboardCheck, Settings } from "lucide-react";
 import { Button } from "../components/ui/button";
 import { Card } from "../components/ui/card";
 
 export function Services() {
+  const location = useLocation();
+
   const services = [
     {
+      id: "wof-inspection",
       icon: CheckCircle,
       title: "WOF Inspection",
       description: "Comprehensive Warrant of Fitness inspection to ensure your vehicle meets all New Zealand safety standards and regulations.",
@@ -18,6 +22,7 @@ export function Services() {
       image: "https://images.unsplash.com/photo-1698998882494-57c3e043f340?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhdXRvbW90aXZlJTIwbWVjaGFuaWMlMjB3b3Jrc2hvcHxlbnwxfHx8fDE3NzM3OTI4NTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
+      id: "mechanical-repairs",
       icon: Wrench,
       title: "Mechanical Repairs",
       description: "Expert mechanical repairs for all makes and models. From minor fixes to major overhauls, our certified technicians have you covered.",
@@ -30,6 +35,7 @@ export function Services() {
       image: "https://images.unsplash.com/photo-1566206085505-2e0904c3e547?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXIlMjBlbmdpbmUlMjByZXBhaXJ8ZW58MXx8fHwxNzczODIzMjE3fDA&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
+      id: "auto-electrical",
       icon: Zap,
       title: "Auto Electrical",
       description: "Specialized auto electrical services including battery replacement, alternator repair, starter motor, and complete electrical diagnostics.",
@@ -42,6 +48,7 @@ export function Services() {
       image: "https://images.unsplash.com/photo-1732027598118-995e2391675d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhdXRvJTIwZWxlY3RyaWNhbCUyMHdpcmluZ3xlbnwxfHx8fDE3NzM4MjMyMTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
+      id: "diagnostics",
       icon: Search,
       title: "Diagnostics",
       description: "Advanced computer diagnostics using the latest equipment to accurately identify and resolve issues with your vehicle's systems.",
@@ -54,6 +61,7 @@ export function Services() {
       image: "https://images.unsplash.com/photo-1764122623556-90a7d480df53?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXIlMjBkaWFnbm9zdGljJTIwY29tcHV0ZXJ8ZW58MXx8fHwxNzczNzM4MDA1fDA&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
+      id: "brake",
       icon: CircleDot,
       title: "Brake",
       description: "Complete brake and suspension services to ensure your vehicle's safety and comfort on the road.",
@@ -66,6 +74,7 @@ export function Services() {
       image: "https://images.unsplash.com/photo-1760317890314-e964ffd7e6a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXIlMjBicmFrZSUyMHNlcnZpY2V8ZW58MXx8fHwxNzczODIzMjE5fDA&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
+      id: "engine-transmission-service",
       icon: Cog,
       title: "Engine & Transmission service",
       description: "Comprehensive engine repair and maintenance services from minor tune-ups to complete engine rebuilds.",
@@ -78,6 +87,7 @@ export function Services() {
       image: "https://images.unsplash.com/photo-1566206085505-2e0904c3e547?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXIlMjBlbmdpbmUlMjByZXBhaXJ8ZW58MXx8fHwxNzczODIzMjE3fDA&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
+      id: "oil-services",
       icon: Droplet,
       title: "Oil Services",
       description: "Regular oil changes and fluid maintenance to keep your engine running smoothly and extend its lifespan.",
@@ -90,6 +100,7 @@ export function Services() {
       image: "https://images.unsplash.com/photo-1771340742493-52fbd5476ccb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXIlMjBvaWwlMjBjaGFuZ2UlMjBzZXJ2aWNlfGVufDF8fHx8MTc3MzcxMjM1OXww&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
+      id: "pre-purchase-inspection",
       icon: ClipboardCheck,
       title: "Pre-Purchase Inspection",
       description: "Comprehensive pre-purchase vehicle inspection to give you peace of mind before buying. Our detailed report covers all major systems and potential issues.",
@@ -102,6 +113,7 @@ export function Services() {
       image: "https://images.unsplash.com/photo-1727893467393-24bc37e8a117?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcmUlMjBwdXJjaGFzZSUyMGNhciUyMGluc3BlY3Rpb24lMjBtZWNoYW5pY3xlbnwxfHx8fDE3NzY0MTQxNjd8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
     },
     {
+      id: "steering-suspension",
       icon: Settings,
       title: "Steering & Suspension",
       description: "Expert steering and suspension services to ensure precise handling, optimal comfort, and safe vehicle control on all road conditions.",
@@ -114,6 +126,19 @@ export function Services() {
       image: "https://images.unsplash.com/photo-1765903916319-f13fba3632c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXIlMjBzdGVlcmluZyUyMHN1c3BlbnNpb24lMjBzeXN0ZW18ZW58MXx8fHwxNzc2NDE0MTY3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
     },
   ];
+
+  useEffect(() => {
+    if (!location.hash) {
+      return;
+    }
+
+    const serviceId = location.hash.slice(1);
+    const section = document.getElementById(serviceId);
+
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }, [location.hash]);
 
   return (
     <div className="w-full">
@@ -138,6 +163,7 @@ export function Services() {
             {services.map((service, index) => (
               <Card 
                 key={index} 
+                id={service.id}
                 className={`bg-[#262626] border-[#0368D3]/20 overflow-hidden hover:border-[#0368D3] transition-all duration-300 ${
                   index % 2 === 0 ? '' : ''
                 }`}
