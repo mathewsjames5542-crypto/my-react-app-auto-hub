@@ -14,19 +14,19 @@ export function Footer() {
               Your go-to automotive service center, delivering reliable repairs and maintenance you can count on.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="text-[#DEDEDE] hover:text-[#0368D3] transition-colors">
+              <a href="#" className="text-[#0368D3] hover:text-[#0368D3]/80 transition-colors">
                 <Facebook size={24} />
               </a>
-              <a href="#" className="text-[#DEDEDE] hover:text-[#0368D3] transition-colors">
+              <a href="#" className="text-[#0368D3] hover:text-[#0368D3]/80 transition-colors">
                 <Instagram size={24} />
               </a>
               {/* <a href="#" className="text-[#DEDEDE] hover:text-[#0368D3] transition-colors">
                 <Twitter size={20} />
               </a> */}
-              <a href="https://wa.me/6491234567" className="text-[#DEDEDE] hover:text-[#0368D3] transition-colors" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/6491234567" className="text-[#0368D3] hover:text-[#0368D3]/80 transition-colors" target="_blank" rel="noopener noreferrer">
                 <WhatsAppIcon size={24} />
               </a>
-              <a href="https://www.tiktok.com/@autohubnz" className="text-[#DEDEDE] hover:text-[#0368D3] transition-colors" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.tiktok.com/@autohubnz" className="text-[#0368D3] hover:text-[#0368D3]/80 transition-colors" target="_blank" rel="noopener noreferrer">
                 <Share2 size={24} />
               </a>
             </div>

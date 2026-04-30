@@ -14,13 +14,13 @@ export function Footer() {
               Your trusted automotive service center providing quality repairs and maintenance since 2010.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="text-[#DEDEDE] hover:text-[#0368D3] transition-colors">
+              <a href="#" className="text-[#0368D3] hover:text-[#0368D3]/80 transition-colors">
                 <Facebook size={20} />
               </a>
-              <a href="#" className="text-[#DEDEDE] hover:text-[#0368D3] transition-colors">
+              <a href="#" className="text-[#0368D3] hover:text-[#0368D3]/80 transition-colors">
                 <Instagram size={20} />
               </a>
-              <a href="#" className="text-[#DEDEDE] hover:text-[#0368D3] transition-colors">
+              <a href="#" className="text-[#0368D3] hover:text-[#0368D3]/80 transition-colors">
                 <Twitter size={20} />
               </a>
             </div>
