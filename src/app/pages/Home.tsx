@@ -7,21 +7,25 @@ import { Testimonials } from "../components/Testimonials";
 export function Home() {
   const services = [
     {
+      href: "/services#wof-inspection",
       title: "WOF Inspection",
       description: "Comprehensive vehicle inspection to ensure your car meets safety standards.",
       icon: CheckCircle,
     },
     {
+      href: "/services#mechanical-repairs",
       title: "Mechanical Repairs",
       description: "Expert mechanical repairs for all makes and models of vehicles.",
       icon: Wrench,
     },
     {
+      href: "/services#engine-transmission-service",
       title: "Engine & Transmission service",
       description: "Professional engine diagnostics and repair services.",
       icon: Wrench,
     },
     {
+      href: "/services#oil-services",
       title: "Oil Services",
       description: "Regular oil changes and fluid maintenance for optimal performance.",
       icon: Clock,
@@ -93,11 +97,13 @@ export function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service, index) => (
-              <Card key={index} className="bg-[#262626] border-[#0368D3]/20 p-6 hover:border-[#0368D3] transition-all duration-300 hover:transform hover:scale-105">
-                <service.icon className="text-[#0368D3] mb-4" size={40} />
-                <h3 className="text-[#DEDEDE] text-xl mb-2">{service.title}</h3>
-                <p className="text-[#A0A0A0]">{service.description}</p>
-              </Card>
+              <Link key={index} to={service.href} className="group block h-full">
+                <Card className="h-full bg-[#262626] border-[#0368D3]/20 p-6 hover:border-[#0368D3] transition-all duration-300 hover:scale-105">
+                  <service.icon className="text-[#0368D3] mb-4 transition-transform duration-300 group-hover:translate-x-1" size={40} />
+                  <h3 className="text-[#DEDEDE] text-xl mb-2">{service.title}</h3>
+                  <p className="text-[#A0A0A0]">{service.description}</p>
+                </Card>
+              </Link>
             ))}
           </div>
           <div className="text-center mt-12">
