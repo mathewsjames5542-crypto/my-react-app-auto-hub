@@ -9,7 +9,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <img src={logo} alt="AutoHub Service Centre" className="h-28 mb-6" />
+            <img src={logo} alt="AutoHub Service Centre" className="h-40 mb-6" />
             <p className="text-[#A0A0A0] mb-4">
               Your go-to automotive service center, delivering reliable repairs and maintenance you can count on.
             </p>

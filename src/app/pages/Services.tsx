@@ -2,6 +2,9 @@ import { Link } from "react-router";
 import { CheckCircle, Wrench, Zap, Search, CircleDot, Cog, Droplet, ArrowRight, ClipboardCheck, Settings } from "lucide-react";
 import { Button } from "../components/ui/button";
 import { Card } from "../components/ui/card";
+import diagnosticImage from "../../assets/diagnostic.jpeg";
+import engineImage from "../../assets/engine.jpeg";
+import oilServicesImage from "../../assets/oil-services.jpeg";
 
 export function Services() {
   const services = [
@@ -51,7 +54,7 @@ export function Services() {
         "Fault code reading",
         "Performance testing",
       ],
-      image: "https://images.unsplash.com/photo-1764122623556-90a7d480df53?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXIlMjBkaWFnbm9zdGljJTIwY29tcHV0ZXJ8ZW58MXx8fHwxNzczNzM4MDA1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      image: diagnosticImage,
     },
     {
       icon: CircleDot,
@@ -75,7 +78,7 @@ export function Services() {
         "Head gasket repairs",
         "Engine rebuilds",
       ],
-      image: "https://images.unsplash.com/photo-1566206085505-2e0904c3e547?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXIlMjBlbmdpbmUlMjByZXBhaXJ8ZW58MXx8fHwxNzczODIzMjE3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      image: engineImage,
     },
     {
       icon: Droplet,
@@ -87,7 +90,7 @@ export function Services() {
         "Multi-point inspection",
         "Synthetic oils available",
       ],
-      image: "https://images.unsplash.com/photo-1771340742493-52fbd5476ccb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXIlMjBvaWwlMjBjaGFuZ2UlMjBzZXJ2aWNlfGVufDF8fHx8MTc3MzcxMjM1OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      image: oilServicesImage,
     },
     {
       icon: ClipboardCheck,

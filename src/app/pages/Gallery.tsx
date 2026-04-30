@@ -1,6 +1,10 @@
 import { Card } from "../components/ui/card";
 import { useState } from "react";
 import { X } from "lucide-react";
+import diagnosticImage from "../../assets/diagnostic.jpeg";
+import engineImage from "../../assets/engine.jpeg";
+import oilServicesImage from "../../assets/oil-services.jpeg";
+import transmissionImage from "../../assets/transmission.jpeg";
 
 export function Gallery() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -32,8 +36,18 @@ export function Gallery() {
       category: "Equipment"
     },
     {
-      url: "https://images.unsplash.com/photo-1770656505767-32ed52b1a8ca?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWNoYW5pYyUyMHdvcmtpbmclMjBjYXIlMjBlbmdpbmV8ZW58MXx8fHwxNzc2MzIxMDc5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      url: engineImage,
       title: "Engine Repair Services",
+      category: "Services"
+    },
+    {
+      url: transmissionImage,
+      title: "Transmission Service",
+      category: "Services"
+    },
+    {
+      url: oilServicesImage,
+      title: "Oil Change Service",
       category: "Services"
     },
     {
@@ -62,7 +76,7 @@ export function Gallery() {
       category: "Services"
     },
     {
-      url: "https://images.unsplash.com/photo-1764122623556-90a7d480df53?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXIlMjBkaWFnbm9zdGljJTIwY29tcHV0ZXJ8ZW58MXx8fHwxNzczNzM4MDA1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      url: diagnosticImage,
       title: "Computer Diagnostics",
       category: "Services"
     },
