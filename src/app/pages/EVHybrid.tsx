@@ -7,7 +7,7 @@ export function EVHybrid() {
   const services = [
     {
       icon: Battery,
-      title: "EV Battery Diagnostics",
+      title: "Hybrid & EV Battery Diagnostics",
       description: "Comprehensive battery health checks, performance testing, and diagnostics using specialized equipment.",
     },
     {
@@ -17,8 +17,8 @@ export function EVHybrid() {
     },
     {
       icon: Wrench,
-      title: "Electric Motor Repairs",
-      description: "Expert repairs and maintenance for electric motors and drive systems.",
+      title: "Hybrid Cooling System",
+      description: "Efficient system that keeps EV batteries and components at optimal temperature for peak performance.",
     },
     {
       icon: Shield,
@@ -60,11 +60,11 @@ export function EVHybrid() {
                   <ArrowRight className="ml-2" size={20} />
                 </Button>
               </Link>
-              <Link to="/contact">
+              {/* <Link to="/contact">
                 <Button variant="outline" className="border-[#10B981] text-[#10B981] hover:bg-[#10B981]/10 px-8 py-6 text-lg">
                   Get a Quote
                 </Button>
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>
@@ -147,7 +147,7 @@ export function EVHybrid() {
               We Service All EV & Hybrid Brands
             </h2>
             <p className="text-[#A0A0A0] mb-12">
-              Our expertise covers all major electric and hybrid vehicle manufacturers including Tesla, Nissan Leaf, Toyota Prius, BMW i-Series, Hyundai Kona Electric, and many more.
+             Our expertise covers all major electric and hybrid vehicle manufacturers including Tesla BYD, Nissan, Toyota, Lexus, BMW, Hyundai Electric, and many more.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <Card className="bg-[#262626] border-[#10B981]/20 p-6 text-center">

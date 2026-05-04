@@ -98,7 +98,7 @@ export function About() {
                 <h2 className="text-3xl font-bold text-[#DEDEDE] mb-6">Our Story</h2>
                 <div className="space-y-4 text-[#A0A0A0]">
                  <p>
-  AutoHub Service Centre was founded in 2010 with a simple mission: to provide honest, reliable, and high-quality automotive services to the Bay of Plenty community.
+  AutoHub Service Centre was founded in 2017 with a simple mission: to provide honest, reliable, and high-quality automotive services to the Bay of Plenty community.
 </p>
 <p>
   What started as a small workshop with just three technicians has grown into one of Bay of Plenty’s most trusted automotive service centers, serving thousands of satisfied customers every year.

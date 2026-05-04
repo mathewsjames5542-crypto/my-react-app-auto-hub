@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Twitter, MessageCircle as WhatsAppIcon, Share2 } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Music2 } from "lucide-react";
 import logo from "../../assets/logo.png";
 
 export function Footer() {
@@ -14,20 +14,14 @@ export function Footer() {
               Your go-to automotive service center, delivering reliable repairs and maintenance you can count on.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="text-[#0368D3] hover:text-[#0368D3]/80 transition-colors">
+              <a href="https://www.facebook.com/share/1Fjf9yQyx9/?mibextid=wwXIfr" className="text-[#0368D3] hover:text-[#0368D3]/80 transition-colors" target="_blank" rel="noopener noreferrer">
                 <Facebook size={24} />
               </a>
-              <a href="#" className="text-[#0368D3] hover:text-[#0368D3]/80 transition-colors">
+              <a href="https://www.instagram.com/autohubservicecentre?igsh=MXY2MGZpYzVlZndhaQ==" className="text-[#0368D3] hover:text-[#0368D3]/80 transition-colors" target="_blank" rel="noopener noreferrer">
                 <Instagram size={24} />
               </a>
-              {/* <a href="#" className="text-[#DEDEDE] hover:text-[#0368D3] transition-colors">
-                <Twitter size={20} />
-              </a> */}
-              <a href="https://wa.me/6491234567" className="text-[#0368D3] hover:text-[#0368D3]/80 transition-colors" target="_blank" rel="noopener noreferrer">
-                <WhatsAppIcon size={24} />
-              </a>
-              <a href="https://www.tiktok.com/@autohubnz" className="text-[#0368D3] hover:text-[#0368D3]/80 transition-colors" target="_blank" rel="noopener noreferrer">
-                <Share2 size={24} />
+              <a href="https://tiktok.com/@autohub89" className="text-[#0368D3] hover:text-[#0368D3]/80 transition-colors" target="_blank" rel="noopener noreferrer">
+                <Music2 size={24} />
               </a>
             </div>
           </div>
@@ -68,13 +62,13 @@ export function Footer() {
           <div>
             <h3 className="text-[#DEDEDE] mb-4">Our Services</h3>
             <ul className="space-y-2 text-[#A0A0A0]">
-              <li>WOF Inspection</li>
-              <li>Mechanical Repairs</li>
-              <li>Auto Electrical</li>
-              <li>Diagnostics</li>
-              <li>Brake </li>
-              <li>Engine & Transmission service</li>
-              <li>Oil Services</li>
+              <li><Link to="/services#wof-inspection" className="hover:text-[#0368D3] transition-colors">WOF Inspection</Link></li>
+              <li><Link to="/services#mechanical-repairs" className="hover:text-[#0368D3] transition-colors">Mechanical Repairs</Link></li>
+              <li><Link to="/services#auto-electrical" className="hover:text-[#0368D3] transition-colors">Auto Electrical</Link></li>
+              <li><Link to="/services#diagnostics" className="hover:text-[#0368D3] transition-colors">Diagnostics</Link></li>
+              <li><Link to="/services#brake" className="hover:text-[#0368D3] transition-colors">Brake</Link></li>
+              <li><Link to="/services#engine-transmission-service" className="hover:text-[#0368D3] transition-colors">Engine & Transmission service</Link></li>
+              <li><Link to="/services#oil-services" className="hover:text-[#0368D3] transition-colors">Oil Services</Link></li>
             </ul>
           </div>
 
@@ -99,11 +93,11 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3 text-[#A0A0A0]">
                 <Phone size={20} className="text-[#0368D3] flex-shrink-0" />
-                <span>+64 0792 59984</span>
+                <span>+64 792 59984</span>
               </li>
               <li className="flex items-center gap-3 text-[#A0A0A0]">
                 <Mail size={20} className="text-[#0368D3] flex-shrink-0" />
-                <span>info@autohub.nz</span>
+                <span>Autohubmount@gmail.com</span>
               </li>
               <li className="flex items-start gap-3 text-[#A0A0A0]">
                 <Clock size={20} className="text-[#0368D3] flex-shrink-0 mt-0.5" />

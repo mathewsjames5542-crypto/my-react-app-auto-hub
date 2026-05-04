@@ -43,12 +43,12 @@ export function Contact() {
     {
       icon: Phone,
       title: "Call Us",
-      details: ["079259984", "Mon-Sat: 8am-6pm"],
+      details: ["+64 792 59984", "Mon-Sat: 8am-6pm"],
     },
     {
       icon: Mail,
       title: "Email Us",
-      details: ["info@autohub.nz", "service@autohub.nz", "24/7 Support"],
+      details: ["Autohubmount@gmail.com", "24/7 Support"],
     },
     {
       icon: Clock,
@@ -70,7 +70,7 @@ export function Contact() {
           </p>
           <p className="text-[#A0A0A0] mb-8">
             We typically respond within 24 hours. If you need immediate assistance, please call us at{" "}
-            <span className="text-[#0368D3]">+64 9 123 4567</span>.
+            <span className="text-[#0368D3]">+64 792 59984</span>.
           </p>
           <Button 
             className="bg-[#0368D3] hover:bg-[#0368D3]/90 text-[#DEDEDE]"
@@ -245,11 +245,11 @@ export function Contact() {
                   <div className="space-y-3 pt-4 border-t border-[#0368D3]/20">
                     <div className="flex items-center gap-3">
                       <Phone className="text-[#0368D3] flex-shrink-0" size={20} />
-                      <span className="text-[#DEDEDE]">079259984</span>
+                      <span className="text-[#DEDEDE]">+64 792 59984</span>
                     </div>
                     <div className="flex items-center gap-3">
                       <Mail className="text-[#0368D3] flex-shrink-0" size={20} />
-                      <span className="text-[#DEDEDE]">info@autohub.nz</span>
+                      <span className="text-[#DEDEDE]">Autohubmount@gmail.com</span>
                     </div>
                   </div>
                 </Card>

@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { Wrench, CheckCircle, Clock, Users, Star, ArrowRight } from "lucide-react";
+import { Wrench, CheckCircle, Clock, Users, Star, ArrowRight, Leaf } from "lucide-react";
 import { Button } from "../components/ui/button";
 import { Card } from "../components/ui/card";
 import { Testimonials } from "../components/Testimonials";
@@ -11,24 +11,28 @@ export function Home() {
       title: "WOF Inspection",
       description: "Comprehensive vehicle inspection to ensure your car meets safety standards.",
       icon: CheckCircle,
+      accent: "#0368D3",
     },
     {
       href: "/services#mechanical-repairs",
-      title: "Mechanical Repairs",
-      description: "Expert mechanical repairs for all makes and models of vehicles.",
+      title: "All Mechanical & Electrical Repairs",
+      description: "Expert mechanical & electrical repairs for all makes and models of vehicles.",
       icon: Wrench,
+      accent: "#0368D3",
     },
     {
       href: "/services#engine-transmission-service",
       title: "Engine & Transmission service",
-      description: "Professional engine diagnostics and repair services.",
+      description: "Professional engine & transmission diagnostics and repair services.",
       icon: Wrench,
+      accent: "#0368D3",
     },
     {
-      href: "/services#oil-services",
-      title: "Oil Services",
-      description: "Regular oil changes and fluid maintenance for optimal performance.",
-      icon: Clock,
+      href: "/ev-hybrid",
+      title: "EV & Hybrid",
+      description: "Specialized diagnostics, maintenance, and repairs for electric and hybrid vehicles.",
+      icon: Leaf,
+      accent: "#10B981",
     },
   ];
 
@@ -98,8 +102,17 @@ export function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service, index) => (
               <Link key={index} to={service.href} className="group block h-full">
-                <Card className="h-full bg-[#262626] border-[#0368D3]/20 p-6 hover:border-[#0368D3] transition-all duration-300 hover:scale-105">
-                  <service.icon className="text-[#0368D3] mb-4 transition-transform duration-300 group-hover:translate-x-1" size={40} />
+                <Card
+                  className="h-full bg-[#262626] p-6 transition-all duration-300 hover:scale-105"
+                  style={{
+                    borderColor: `${service.accent}33`,
+                  }}
+                >
+                  <service.icon
+                    className="mb-4 transition-transform duration-300 group-hover:translate-x-1"
+                    style={{ color: service.accent }}
+                    size={40}
+                  />
                   <h3 className="text-[#DEDEDE] text-xl mb-2">{service.title}</h3>
                   <p className="text-[#A0A0A0]">{service.description}</p>
                 </Card>
