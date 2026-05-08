@@ -10,6 +10,7 @@ import { toast } from "sonner";
 export function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showFeedbackForm, setShowFeedbackForm] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [feedbackData, setFeedbackData] = useState({
     name: "",
     email: "",
@@ -63,7 +64,7 @@ export function Testimonials() {
     setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
 
-  const handleFeedbackSubmit = (e: React.FormEvent) => {
+  const handleFeedbackSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     if (!feedbackData.name || !feedbackData.email || !feedbackData.message) {
@@ -71,17 +72,52 @@ export function Testimonials() {
       return;
     }
 
-    // Show success message
-    toast.success("Thank you for your feedback!");
-    
-    // Reset form
-    setFeedbackData({
-      name: "",
-      email: "",
-      message: "",
-      rating: 5,
-    });
-    setShowFeedbackForm(false);
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/Autohubmount@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: feedbackData.name,
+          email: feedbackData.email,
+          rating: `${feedbackData.rating}/5`,
+          message: feedbackData.message,
+          _subject: `New website feedback from ${feedbackData.name}`,
+          _template: "table",
+          _captcha: "false",
+          _url: window.location.href,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Unable to submit feedback");
+      }
+
+      const result = await response.json();
+
+      if (!result.success) {
+        throw new Error(result.message || "Unable to submit feedback");
+      }
+
+      toast.success("Thank you for your feedback!");
+
+      setFeedbackData({
+        name: "",
+        email: "",
+        message: "",
+        rating: 5,
+      });
+      setShowFeedbackForm(false);
+    } catch (error) {
+      console.error("Feedback form submission failed:", error);
+      toast.error("We couldn't send your feedback right now. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleInputChange = (field: string, value: string | number) => {
@@ -266,10 +302,11 @@ export function Testimonials() {
 
                 <Button
                   type="submit"
+                  disabled={isSubmitting}
                   className="bg-[#0368D3] hover:bg-[#0368D3]/90 text-[#DEDEDE] w-full"
                 >
                   <Send className="mr-2" size={18} />
-                  Submit Feedback
+                  {isSubmitting ? "Sending Feedback..." : "Submit Feedback"}
                 </Button>
               </form>
             </Card>

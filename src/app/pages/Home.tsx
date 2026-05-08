@@ -3,6 +3,7 @@ import { Wrench, CheckCircle, Clock, Users, Star, ArrowRight, Leaf } from "lucid
 import { Button } from "../components/ui/button";
 import { Card } from "../components/ui/card";
 import { Testimonials } from "../components/Testimonials";
+import wofInspectionImage from "../../assets/wof-inspection.jpeg";
 
 export function Home() {
   const services = [
@@ -63,7 +64,10 @@ export function Home() {
     <div className="w-full">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-[#000000] via-[#0A0A0A] to-[#000000] py-20 md:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1698998882494-57c3e043f340?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhdXRvbW90aXZlJTIwbWVjaGFuaWMlMjB3b3Jrc2hvcHxlbnwxfHx8fDE3NzM3OTI4NTl8MA&ixlib=rb-4.1.0&q=80&w=1080')] bg-cover bg-center opacity-10" />
+        <div
+          className="absolute inset-0 bg-cover bg-center opacity-10"
+          style={{ backgroundImage: `url(${wofInspectionImage})` }}
+        />
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-6xl font-bold text-[#DEDEDE] mb-6">

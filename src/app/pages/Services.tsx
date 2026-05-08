@@ -3,9 +3,15 @@ import { Link, useLocation } from "react-router";
 import { CheckCircle, Wrench, Zap, Search, CircleDot, Cog, Droplet, ArrowRight, ClipboardCheck, Settings } from "lucide-react";
 import { Button } from "../components/ui/button";
 import { Card } from "../components/ui/card";
+import autoElectricImage from "../../assets/auto-electric.jpeg";
+import brakeImage from "../../assets/brake.jpg";
 import diagnosticImage from "../../assets/diagnostic.jpeg";
 import engineImage from "../../assets/engine.jpeg";
+import mechanicalRepairsImage from "../../assets/mechanical-repairs.jpg";
 import oilServicesImage from "../../assets/oil-services.jpeg";
+import prePurchaseInspectionImage from "../../assets/pre-purchase-inspection.jpg";
+import steeringSuspensionImage from "../../assets/steering-suspension.jpg";
+import wofInspectionImage from "../../assets/wof-inspection.jpeg";
 
 export function Services() {
   const location = useLocation();
@@ -22,7 +28,7 @@ export function Services() {
         "Same-day service",
         "Minor repairs included",
       ],
-      image: "https://images.unsplash.com/photo-1698998882494-57c3e043f340?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhdXRvbW90aXZlJTIwbWVjaGFuaWMlMjB3b3Jrc2hvcHxlbnwxfHx8fDE3NzM3OTI4NTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      image: wofInspectionImage,
     },
     {
       id: "mechanical-repairs",
@@ -35,7 +41,7 @@ export function Services() {
         "Experienced technicians",
         "Warranty on repairs",
       ],
-      image: "https://images.unsplash.com/photo-1566206085505-2e0904c3e547?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXIlMjBlbmdpbmUlMjByZXBhaXJ8ZW58MXx8fHwxNzczODIzMjE3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      image: mechanicalRepairsImage,
     },
     {
       id: "auto-electrical",
@@ -48,7 +54,7 @@ export function Services() {
         "Alternator & starter repairs",
         "Lighting systems",
       ],
-      image: "https://images.unsplash.com/photo-1732027598118-995e2391675d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhdXRvJTIwZWxlY3RyaWNhbCUyMHdpcmluZ3xlbnwxfHx8fDE3NzM4MjMyMTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      image: autoElectricImage,
     },
     {
       id: "diagnostics",
@@ -74,7 +80,7 @@ export function Services() {
         "Suspension repairs",
         "Wheel alignment",
       ],
-      image: "https://images.unsplash.com/photo-1760317890314-e964ffd7e6a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXIlMjBicmFrZSUyMHNlcnZpY2V8ZW58MXx8fHwxNzczODIzMjE5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      image: brakeImage,
     },
     {
       id: "engine-transmission-service",
@@ -113,7 +119,7 @@ export function Services() {
         "Test drive evaluation",
         "Buy with confidence",
       ],
-      image: "https://images.unsplash.com/photo-1727893467393-24bc37e8a117?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcmUlMjBwdXJjaGFzZSUyMGNhciUyMGluc3BlY3Rpb24lMjBtZWNoYW5pY3xlbnwxfHx8fDE3NzY0MTQxNjd8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: prePurchaseInspectionImage,
     },
     {
       id: "steering-suspension",
@@ -126,7 +132,7 @@ export function Services() {
         "Wheel alignment & balancing",
         "Shock absorber service",
       ],
-      image: "https://images.unsplash.com/photo-1765903916319-f13fba3632c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXIlMjBzdGVlcmluZyUyMHN1c3BlbnNpb24lMjBzeXN0ZW18ZW58MXx8fHwxNzc2NDE0MTY3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: steeringSuspensionImage,
     },
   ];
 

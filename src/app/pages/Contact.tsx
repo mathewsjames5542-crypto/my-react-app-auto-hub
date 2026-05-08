@@ -6,6 +6,7 @@ import { Input } from "../components/ui/input";
 import { Label } from "../components/ui/label";
 import { Textarea } from "../components/ui/textarea";
 import { toast } from "sonner";
+import afterpayImage from "../../assets/afterpay.jpeg";
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -17,8 +18,9 @@ export function Contact() {
   });
 
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     if (!formData.name || !formData.email || !formData.message) {
@@ -26,8 +28,46 @@ export function Contact() {
       return;
     }
 
-    setIsSubmitted(true);
-    toast.success("Message sent successfully!");
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/Autohubmount@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone || "Not provided",
+          subject: formData.subject || "Website contact form enquiry",
+          message: formData.message,
+          _subject: `Contact form: ${formData.subject || `New enquiry from ${formData.name}`}`,
+          _template: "table",
+          _captcha: "false",
+          _url: window.location.href,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Unable to send message");
+      }
+
+      const result = await response.json();
+
+      if (!result.success) {
+        throw new Error(result.message || "Unable to send message");
+      }
+
+      setIsSubmitted(true);
+      toast.success("Message sent successfully!");
+    } catch (error) {
+      console.error("Contact form submission failed:", error);
+      toast.error("We couldn't send your message right now. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleInputChange = (field: string, value: string) => {
@@ -53,7 +93,7 @@ export function Contact() {
     {
       icon: Clock,
       title: "Opening Hours",
-      details: ["Mon-Fri: 8am - 6pm", "Saturday: 8am - 4pm", "Sunday: Closed"],
+      details: ["Mon-Fri: 8am - 5.30pm", "Saturday: 8am - 3pm", "Sunday: Closed"],
     },
   ];
 
@@ -200,11 +240,12 @@ export function Contact() {
                     </div>
 
                     <Button 
-                      type="submit" 
+                      type="submit"
+                      disabled={isSubmitting}
                       className="bg-[#0368D3] hover:bg-[#0368D3]/90 text-[#DEDEDE] w-full py-6"
                     >
                       <Send className="mr-2" size={18} />
-                      Send Message
+                      {isSubmitting ? "Sending Message..." : "Send Message"}
                     </Button>
                   </form>
                 </Card>
@@ -280,9 +321,14 @@ export function Contact() {
                 <h3 className="text-lg font-semibold text-[#DEDEDE] mb-2">
                   What payment methods do you accept?
                 </h3>
-                <p className="text-[#A0A0A0]">
-                  We accept EFTPOS, all major credit cards, and offer account facilities for commercial customers.
+                <p className="text-[#A0A0A0] mb-4">
+                  We accept EFTPOS, all major credit cards, Afterpay, and offer account facilities for commercial customers.
                 </p>
+                <img
+                  src={afterpayImage}
+                  alt="Afterpay payment option"
+                  className="h-auto w-full max-w-sm rounded-md bg-white p-3 object-contain"
+                />
               </Card>
 
               <Card className="bg-[#262626] border-[#0368D3]/20 p-6">

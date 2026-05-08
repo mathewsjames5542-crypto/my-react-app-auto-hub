@@ -149,7 +149,7 @@ export function EVHybrid() {
             <p className="text-[#A0A0A0] mb-12">
              Our expertise covers all major electric and hybrid vehicle manufacturers including Tesla BYD, Nissan, Toyota, Lexus, BMW, Hyundai Electric, and many more.
             </p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <Card className="bg-[#262626] border-[#10B981]/20 p-6 text-center">
                 <Battery className="text-[#10B981] mx-auto mb-2" size={32} />
                 <p className="text-[#DEDEDE] font-semibold">Tesla</p>
@@ -166,7 +166,7 @@ export function EVHybrid() {
                 <Battery className="text-[#10B981] mx-auto mb-2" size={32} />
                 <p className="text-[#DEDEDE] font-semibold">Hyundai</p>
               </Card>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
