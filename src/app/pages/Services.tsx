@@ -7,10 +7,10 @@ import autoElectricImage from "../../assets/auto-electric.jpeg";
 import brakeImage from "../../assets/brake.jpg";
 import diagnosticImage from "../../assets/diagnostic.jpeg";
 import engineImage from "../../assets/engine.jpeg";
-import mechanicalRepairsImage from "../../assets/mechanical-repairs.jpg";
+import mechanicalRepairsImage from "../../assets/mechanical-repairs.jpeg";
 import oilServicesImage from "../../assets/oil-services.jpeg";
 import prePurchaseInspectionImage from "../../assets/pre-purchase-inspection.jpg";
-import steeringSuspensionImage from "../../assets/steering-suspension.jpg";
+import steeringSuspensionImage from "../../assets/steering-suspension.jpeg";
 import wofInspectionImage from "../../assets/wof-inspection.jpeg";
 
 export function Services() {

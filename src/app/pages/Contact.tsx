@@ -256,22 +256,13 @@ export function Contact() {
                 <div>
                   <h2 className="text-3xl font-bold text-[#DEDEDE] mb-6">Find Us</h2>
                   <Card className="bg-[#262626] border-[#0368D3]/20 overflow-hidden">
-                    <div className="aspect-video bg-[#000000] relative">
-                      {/* Map placeholder - in a real app, this would be an embedded Google Map */}
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="text-center">
-                          <MapPin className="text-[#0368D3] mx-auto mb-4" size={48} />
-                          <p className="text-[#DEDEDE] font-semibold mb-2">1/70 Truman Lane</p>
-                          <p className="text-[#A0A0A0]">Mount Maunganui 3175.</p>
-                        </div>
-                      </div>
-                      {/* You can replace this with an actual map iframe */}
+                    <div className="aspect-video bg-[#000000]">
                       <iframe
                         title="AutoHub Location"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3193.155634887753!2d174.76379431531805!3d-36.84846997993876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d47fb5a9ce6fb%3A0x4ca2ff3547b5dbf!2sAuckland%2C%20New%20Zealand!5e0!3m2!1sen!2sus!4v1647886400000!5m2!1sen!2sus"
-                        className="absolute inset-0 w-full h-full opacity-50 hover:opacity-100 transition-opacity"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1284.261374!2d176.1873!3d-37.975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d78f7b5a4b6b4d9%3A0xf4c2ff!2s1%2F70%20Truman%20Lane%2C%20Mount%20Maunganui%203175!5e0!3m2!1sen!2snz!4v1730!5m2!1sen!2snz"
+                        className="w-full h-full"
                         style={{ border: 0 }}
-                        allowFullScreen
+                        allowFullScreen={false}
                         loading="lazy"
                       />
                     </div>

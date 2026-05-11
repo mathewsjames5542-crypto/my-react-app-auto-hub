@@ -7,7 +7,7 @@ import brakeSystemRepairsImage from "../../assets/brake-system-repairs.jpg";
 import diagnosticImage from "../../assets/diagnostic.jpeg";
 import engineImage from "../../assets/engine.jpeg";
 import hydraulicLiftSystemsImage from "../../assets/hydraulic-lift-systems.jpg";
-import mechanicalRepairsImage from "../../assets/mechanical-repairs.jpg";
+import mechanicalRepairsImage from "../../assets/mechanical-repairs.jpeg";
 import modernServiceCenterImage from "../../assets/modern-service-center.jpg";
 import oilServicesImage from "../../assets/oil-services.jpeg";
 import professionalToolsImage from "../../assets/professional-tools.jpg";
